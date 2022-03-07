@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+.container input[name='btn'] {
+  display: none;
+}
+.container .slide {
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+.container .slide .slide-inner {
+  font-size: 0;
+  width: 900px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .5s;
+}
+.container .btn {
+  position: absolute;
+  bottom: 10px;
+  left:38%;
+}
+.container .btn label {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: rgb(216, 216, 216);
+}
+.container input[id='btn1']:checked ~ .btn label[for=btn1] {
+  background-color: crimson;
+}
+.container input[id='btn2']:checked ~ .btn label[for=btn2] {
+  background-color: crimson;
+}
+.container input[id='btn3']:checked ~ .btn label[for=btn3] {
+  background-color: crimson;
+}
+.container input[id='btn1']:checked ~ .slide .slide-inner {
+  top: 0;
+  left: 0;
+}
+.container input[id='btn2']:checked ~ .slide .slide-inner {
+  top: 0;
+  left: -300px;
+}
+.container input[id='btn3']:checked ~ .slide .slide-inner {
+  top: 0;
+  left: -600px;
+}
